@@ -1,0 +1,25 @@
+@import "mixin";
+@import "wrapper";
+@import "mainpage";
+
+
+@font-face{
+  font-family: 'MontserratRegular';
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'MontserratBold';
+  src: url('../fonts/Montserrat/Montserrat-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'KaushanScriptRegular';
+  src: url('../fonts/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
