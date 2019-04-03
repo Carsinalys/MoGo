@@ -1,13 +1,13 @@
 import React from 'react'
 
-import BG from './mainbg'
+import MainPage from './mainbg'
 
-class MainPage extends React.Component {
+class Page extends React.Component {
   render() {
     return (
-      <BG/>
+      <MainPage/>
     );
   }
 }
 
-export default MainPage;
+export default Page;

@@ -4,7 +4,8 @@ import './scss/main.scss'
 import React from 'react'
 import {render} from 'react-dom'
 
-import MainPage from './js/conponents/mainpage'
+import Page from './js/conponents/mainpage'
+import About from './js/conponents/about'
 
 
-render( <MainPage /> , document.getElementById('app'));
+render( <About/> , document.getElementById('app'));
