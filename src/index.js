@@ -4,8 +4,6 @@ import './scss/main.scss'
 import React from 'react'
 import {render} from 'react-dom'
 
-import Page from './js/conponents/mainpage'
-import About from './js/conponents/about'
+import Root from './js/conponents/root'
 
-
-render( <About/> , document.getElementById('app'));
+render( <Root/> , document.getElementById('app'));

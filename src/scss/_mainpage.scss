@@ -1,5 +1,8 @@
 .wrapper__background {
-  background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9)) ;
+  background: linear-gradient(to bottom, rgba(243,129,129,0.9), rgba(252,227,138,0.9));
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 
 }
 
@@ -13,7 +16,7 @@
   justify-content: space-between;
   padding-top: 4rem;
   align-items: flex-end;
-  margin-bottom: 18rem;
+  margin-bottom: 17rem;
 }
 
 .nav__images__list {
