@@ -1,3 +1,13 @@
+@keyframes aboutShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
+
 .about {
   margin-top: 9rem;
   text-align: center;
@@ -5,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 11rem;
+  animation: aboutShow 1s;
 }
 
 .about__top__text {

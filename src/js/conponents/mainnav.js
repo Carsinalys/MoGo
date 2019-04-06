@@ -15,16 +15,16 @@ class Mainnav extends React.Component {
     return (
       <div className="container container_first_theme">
         <div className="logo">
-          <p className="logo__text">MoGO</p>
+          <p className={this.getClassLogo()}>MoGO</p>
         </div>
         <nav className="nav">
           <div className="nav__links">
             <ul className="nav__links_list">
-              <li className="nav__links__item"><a href="#" className="nav__links__link nav__links__link_active" onClick={this.handleMainPage} >about</a></li>
-              <li className="nav__links__item"><a href="#" className="nav__links__link" onClick={this.handleAboutPage}>servise</a></li>
-              <li className="nav__links__item"><a href="#" className="nav__links__link">work</a></li>
-              <li className="nav__links__item"><a href="#" className="nav__links__link">blog</a></li>
-              <li className="nav__links__item"><a href="#" className="nav__links__link">contact</a></li>
+              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 1 ? "nav__links__link nav__links__link_active" : "nav__links__link black_theme"} onClick={this.handleMainPage} >about</a></li>
+              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link nav__links__link_active black_theme" : "nav__links__link  "} onClick={this.handleAboutPage}>servise</a></li>
+              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>work</a></li>
+              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>blog</a></li>
+              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>contact</a></li>
             </ul>
           </div>
           <div className="nav__images">
@@ -37,13 +37,16 @@ class Mainnav extends React.Component {
       </div>
     );
   }
+
+  getClassLogo = () => this.props.pageNumber == 1 ? "logo__text" : "logo__text black_theme";
+
+
+
   handleMainPage = ()=>{
           this.props.dispatch({type: 'main'});
-          console.log(this.props)
   };
   handleAboutPage = ()=>{
-    this.props.dispatch({type: 'about'});
-    console.log(this.props)
+          this.props.dispatch({type: 'about'});
   }
 }
 
