@@ -21,10 +21,10 @@ class Mainnav extends React.Component {
           <div className="nav__links">
             <ul className="nav__links_list">
               <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 1 ? "nav__links__link nav__links__link_active" : "nav__links__link black_theme"} onClick={this.handleMainPage} >about</a></li>
-              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link nav__links__link_active black_theme" : "nav__links__link  "} onClick={this.handleAboutPage}>servise</a></li>
-              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>work</a></li>
-              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>blog</a></li>
-              <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 2 ? "nav__links__link  black_theme" : "nav__links__link  "}>contact</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,2)} onClick={this.handleAboutPage}>servise</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,3)} onClick={this.handleWorkPage}>work</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,4)}>blog</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,5)}>contact</a></li>
             </ul>
           </div>
           <div className="nav__images">
@@ -38,16 +38,19 @@ class Mainnav extends React.Component {
     );
   }
 
+  getClassAbout = (num1, num2) => {
+          if (this.props.pageNumber == num1) {return "nav__links__link"}
+          else if (this.props.pageNumber == num2) {return "nav__links__link nav__links__link_active black_theme"}
+          else {return "nav__links__link black_theme"}
+
+  };
+
   getClassLogo = () => this.props.pageNumber == 1 ? "logo__text" : "logo__text black_theme";
 
+  handleMainPage = ()=>  this.props.dispatch({type: 'main'});
+  handleAboutPage = ()=>  this.props.dispatch({type: 'about'});
+  handleWorkPage = ()=> this.props.dispatch({type: 'work'});
 
-
-  handleMainPage = ()=>{
-          this.props.dispatch({type: 'main'});
-  };
-  handleAboutPage = ()=>{
-          this.props.dispatch({type: 'about'});
-  }
 }
 
 export default connect((state)=>({

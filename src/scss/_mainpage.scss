@@ -190,13 +190,20 @@
   }
 }
 
+.nav__bottom_link_dark {
+  border-top: 3px #000000 solid;
+  &:hover {
+    border-top: 3px #666666 solid;
+  }
+}
+
 .nav__bottoom__number {
   font-family: MontserratBold;
   font-size: rem(20);
   margin-right: 0.5rem;
 }
 
-.nav__bottom_link_active {
+.nav__bottom_link_active, .nav__bottom_link_active1-2 {
   position: relative;
   &:hover {
     &:before {
@@ -212,6 +219,17 @@
     width: 30%;
     top: -3px;
     transition: 0.3s;
+  }
+}
+
+.nav__bottom_link_active1-2 {
+  &:hover {
+    &:before {
+      background: #101010;
+    }
+  }
+  &:before {
+    background: #999999;
   }
 }
 

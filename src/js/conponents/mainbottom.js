@@ -8,16 +8,16 @@ class Bottom extends React.Component {
         <nav className="nav__bottom">
           <ul className="nav__bottom__list">
             <li className="nav__bottom__item">
-              <a href="#" className={this.props.number == 1 ? "nav__bottom_link nav__bottom_link_active" : "nav__bottom_link black_theme"}><span className="nav__bottoom__number">01</span>intro</a>
+              <a href="#" className={this.props.number == 1 ? "nav__bottom_link nav__bottom_link_active" : "nav__bottom_link nav__bottom_link_active1-2 black_theme nav__bottom_link_dark"}><span className="nav__bottoom__number">01</span>intro</a>
             </li>
             <li className="nav__bottom__item">
-              <a href="#" className={this.props.number == 2 ? "nav__bottom_link nav__bottom_link_active black_theme" : "nav__bottom_link"}><span className="nav__bottoom__number">02</span>work</a>
+              <a href="#" className={this.props.number == 1 ? "nav__bottom_link " : "nav__bottom_link black_theme nav__bottom_link_dark"}><span className="nav__bottoom__number">02</span>work</a>
             </li>
             <li className="nav__bottom__item">
-              <a href="#" className={this.props.number == 1 ? "nav__bottom_link" : "nav__bottom_link black_theme"}><span className="nav__bottoom__number">03</span>about</a>
+              <a href="#" className={this.props.number == 1 ? "nav__bottom_link" : "nav__bottom_link black_theme nav__bottom_link_dark"}><span className="nav__bottoom__number">03</span>about</a>
             </li>
             <li className="nav__bottom__item">
-              <a href="#" className={this.props.number == 1 ? "nav__bottom_link" : "nav__bottom_link black_theme"}><span className="nav__bottoom__number">04</span>contacts</a>
+              <a href="#" className={this.props.number == 1 ? "nav__bottom_link" : "nav__bottom_link black_theme nav__bottom_link_dark"}><span className="nav__bottoom__number">04</span>contacts</a>
             </li>
           </ul>
         </nav>

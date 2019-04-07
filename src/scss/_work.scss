@@ -1,0 +1,95 @@
+.work__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work__text__top__text {
+  font-family: KaushanScriptRegular;
+  font-size: rem(24);
+  color: #333333;
+}
+
+.work__text__title__text {
+  margin: 2.5rem 0 4rem 0;
+  font-size: rem(30);
+  font-family: MontserratBold;
+  color: #333333;
+}
+
+.work__text__line {
+  width: 6rem;
+  height: 3px;
+  background: #f38181;
+  margin-bottom: 6rem;
+}
+
+///////////////////////
+
+.work__list__top, .work__list__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work__list__bottom {
+  margin-bottom: 12rem;
+}
+
+.power {
+  width: 30%;
+  display: flex;
+}
+
+.power__image {
+  margin-right: 2.7rem;
+}
+
+.work__powers__line {
+  background: #e5e5e5;
+  height: 1px;
+  width: 100%;
+  margin: 5rem 0;
+}
+
+#clock, #book, #home, #computer, #square, #graph {
+  fill: #95e1d3;
+}
+
+.power__text__title {
+  color: #333333;
+  font-family: MontserratBold;
+  font-size: rem(14);
+  margin-bottom: 2rem;
+}
+
+.power__text__discription {
+  font-size: rem(15);
+  font-family: MontserratRegular;
+  color: #999999;
+}
+/////////////////////////////////////
+.work_bg {
+  background: url("../img/workBG.jpg") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 7rem;
+}
+
+.work_filter {
+  position: relative;
+  background: rgba(255,255,255,0.85);
+  padding-top: 10rem;
+}
+
+.work__tablet {
+  text-align: center;
+}
+
+.work__phone {
+  position: absolute;
+  bottom: -10%;
+  right: 17%;
+}
+
+.work {
+  animation: aboutShow 1s;
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Mainnav from './mainnav'
-import Content from './maincontent'
+import Bottom from './mainbottom'
 import PropTypes from "prop-types";
 import { CSSTransitionGroup } from 'react-transition-group'
 import About from './about'
-import Bottom from './mainbottom'
+import Content from './maincontent'
+import Work from './work'
+
 
 
 class MainPage extends React.Component {
@@ -15,7 +17,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className={this.getClassWrapper()}>
-        <div className={this.getClassName()} onClick={this.handleLog}>
+        <div className={this.getClassName()}>
           <Mainnav />
             {this.renderPage()}
           <Bottom/>
@@ -31,11 +33,11 @@ class MainPage extends React.Component {
             let currentNumber = this.props.pageNumber;
             switch (currentNumber) {
               case 1: return <Content/>;
-              case 2: return <About/>
+              case 2: return <About/>;
+              case 3: return <Work/>;
             }
 };
 
-  handleLog = ()=>{console.log(this.props)}
 }
 
 export default connect((state)=>({
