@@ -23,8 +23,8 @@ class Mainnav extends React.Component {
               <li className="nav__links__item"><a href="#" className={this.props.pageNumber == 1 ? "nav__links__link nav__links__link_active" : "nav__links__link black_theme"} onClick={this.handleMainPage} >about</a></li>
               <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,2)} onClick={this.handleAboutPage}>servise</a></li>
               <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,3)} onClick={this.handleWorkPage}>work</a></li>
-              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,4)}>blog</a></li>
-              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,5)}>contact</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,4)} onClick={this.handleBlogPage}>blog</a></li>
+              <li className="nav__links__item"><a href="#" className={this.getClassAbout(1,5)} onClick={this.handleContactsPage}>contact</a></li>
             </ul>
           </div>
           <div className="nav__images">
@@ -50,7 +50,8 @@ class Mainnav extends React.Component {
   handleMainPage = ()=>  this.props.dispatch({type: 'main'});
   handleAboutPage = ()=>  this.props.dispatch({type: 'about'});
   handleWorkPage = ()=> this.props.dispatch({type: 'work'});
-
+  handleBlogPage = () => this.props.dispatch({type: 'blog'});
+  handleContactsPage = () => this.props.dispatch({type: 'contacts'});
 }
 
 export default connect((state)=>({

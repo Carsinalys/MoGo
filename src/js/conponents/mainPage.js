@@ -7,6 +7,9 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import About from './about'
 import Content from './maincontent'
 import Work from './work'
+import Blog from './blog'
+import Contacts from './contacts'
+import Intro from './intro'
 
 
 
@@ -20,6 +23,7 @@ class MainPage extends React.Component {
         <div className={this.getClassName()}>
           <Mainnav />
             {this.renderPage()}
+            <Intro/>
           <Bottom/>
         </div>
       </div>
@@ -35,6 +39,8 @@ class MainPage extends React.Component {
               case 1: return <Content/>;
               case 2: return <About/>;
               case 3: return <Work/>;
+              case 4: return <Blog/>;
+              case 5: return <Contacts/>;
             }
 };
 

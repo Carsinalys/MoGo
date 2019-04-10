@@ -4,7 +4,9 @@ export default (state, action) => {
   switch (type) {
     case 'main': return currentPage = 1;
     case 'about': return currentPage = 2;
-    case 'work': return currentPage = 3
+    case 'work': return currentPage = 3;
+    case 'blog': return currentPage = 4;
+    case 'contacts': return currentPage = 5;
   }
 
   return currentPage
