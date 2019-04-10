@@ -23,7 +23,6 @@ class MainPage extends React.Component {
         <div className={this.getClassName()}>
           <Mainnav />
             {this.renderPage()}
-            <Intro/>
           <Bottom/>
         </div>
       </div>
@@ -41,6 +40,7 @@ class MainPage extends React.Component {
               case 3: return <Work/>;
               case 4: return <Blog/>;
               case 5: return <Contacts/>;
+              case 6: return <Intro/>;
             }
 };
 

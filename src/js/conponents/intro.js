@@ -1,5 +1,7 @@
 import React from 'react'
 import WorkText from './workText'
+import IntroCollage from './introCollage'
+import IntroSlider from './introSlider'
 
 class Intro extends React.Component {
   render() {
@@ -9,6 +11,8 @@ class Intro extends React.Component {
         <div className="intro__about">
           <p className="intro__about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur esse et laborum molestiae nulla perspiciatis quis veniam veritatis voluptate!</p>
         </div>
+        <IntroCollage/>
+        <IntroSlider/>
       </div>
     )
   }

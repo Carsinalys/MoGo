@@ -7,6 +7,7 @@ export default (state, action) => {
     case 'work': return currentPage = 3;
     case 'blog': return currentPage = 4;
     case 'contacts': return currentPage = 5;
+    case 'intro': return currentPage = 6;
   }
 
   return currentPage
