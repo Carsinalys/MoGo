@@ -17,6 +17,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 12rem;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 }
 
 .contacts__item {
@@ -73,6 +76,14 @@
   justify-content: center;
   background: #fce38a;
   transition: 0.3s;
+  @include littleDesctop {
+    width: 3rem;
+    height: 3rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
 
 #twitter, #pinterest, #facebook, #instagram {

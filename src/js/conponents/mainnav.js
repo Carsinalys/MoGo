@@ -38,7 +38,7 @@ class Mainnav extends React.Component {
     );
   }
 
-  getMarginMenu = () => this.props.pageNumber == 7 || this.props.pageNumber == 8 || this.props.pageNumber == 9 ? "container container_first_theme container_second_theme" : "container container_first_theme"
+  getMarginMenu = () => this.props.pageNumber == 7 || this.props.pageNumber == 8 || this.props.pageNumber == 9 ? "container container_first_theme container_second_theme" : "container container_first_theme";
 
   getClassAbout = (num1, num2) => {
           if (this.props.pageNumber == num1) {return "nav__links__link"}

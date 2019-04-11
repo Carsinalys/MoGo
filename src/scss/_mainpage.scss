@@ -17,6 +17,11 @@
   padding-top: 4rem;
   align-items: flex-end;
   margin-bottom: 17rem;
+
+  @include semiMobile {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .container_second_theme {
@@ -34,6 +39,12 @@
 
 .nav__links_list {
   display: flex;
+}
+
+.logo {
+  @include semiMobile {
+    margin-right: 3rem;
+  }
 }
 
 .logo__text {
@@ -59,6 +70,10 @@
   &:last-child {
     margin-right: 0;
   }
+  @include mobile {
+    margin-right: 2rem;
+  }
+
 }
 
 .nav__links {
@@ -127,6 +142,9 @@
   font-family: KaushanScriptRegular;
   font-size: rem(72);
   color: #ffffff;
+  @include semiMobile {
+    font-size: rem(50);
+  }
 }
 
 .context__title__text {
@@ -136,6 +154,9 @@
   color: #ffffff;
   line-height: rem(140);
   text-transform: uppercase;
+  @include semiMobile {
+    font-size: rem(100);
+  }
 }
 
 .context__line {
@@ -171,6 +192,9 @@
 .nav__bottom__list {
   display: flex;
   justify-content: space-between;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 }
 
 .nav__bottom__item {

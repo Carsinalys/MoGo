@@ -61,17 +61,9 @@ class BlogInfo extends React.Component {
     )
   }
 
-  handleShowFirst = () => {
-              this.setState({ first: true, second: false, third: false });
-  };
-  handleShowSecond = () => {
-    this.setState({ first: false, second: true, third: false });
-    console.log(this.state);
-  };
-  handleShowThird = () => {
-    this.setState({ first: false, second: false, third: true });
-    console.log(this.state);
-  }
+  handleShowFirst = () =>  this.state.first == true ? this.setState({ first: false, second: false, third: false }) : this.setState({ first: true, second: false, third: false });
+  handleShowSecond = () => this.state.second == true ? this.setState({ first: false, second: false, third: false }) : this.setState({ first: false, second: true, third: false });
+  handleShowThird = () => this.state.third == true ? this.setState({ first: false, second: false, third: false }) : this.setState({ first: false, second: false, third: true });
 
 
 

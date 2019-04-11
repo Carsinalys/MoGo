@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 12rem;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 }
 
 .stories__item {

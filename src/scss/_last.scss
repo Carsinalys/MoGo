@@ -137,18 +137,34 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 7rem;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
+  @include laptop {
+    flex-direction: column;
+  }
 }
 
 .social__first {
   width: 39%;
+  @include laptop {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
 }
 
 .social__second {
   width: 28%;
+  @include laptop {
+    width: 100%;
+  }
 }
 
 .social__third {
   width: 22.5%;
+  @include laptop {
+    width: 100%;
+  }
 }
 
 .social__first__about__title {
@@ -251,6 +267,9 @@
 .social__second__about {
   width: 59%;
   padding-top: 2rem;
+  @include laptop {
+    width: 85%;
+  }
 }
 
 .social__second__about__title {
@@ -283,6 +302,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  @include mobile {
+    justify-content: center;
+  }
+
 }
 
 .social__third__item {
@@ -290,6 +313,16 @@
   margin: 0 0.2rem 0.2rem 0;
   &:nth-child(3n) {
     margin: 0 0 0.2rem 0;
+  }
+  @include laptop {
+    width: 10%;
+    &:nth-child(3n) {
+      margin: 0 0.2rem 0.2rem 0;
+    }
+  }
+  @include mobile {
+    width: 32.5%;
+    text-align: center;
   }
 }
 

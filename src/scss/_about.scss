@@ -16,6 +16,9 @@
   align-items: center;
   margin-bottom: 11rem;
   animation: aboutShow 1s;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 }
 
 .about__top__text {
@@ -111,6 +114,7 @@
 
 .numbers {
   display: flex;
+
 }
 
 .numbers__block {
@@ -121,12 +125,18 @@
   &:last-child {
     border-right: 1px #b5eae0 solid;
   }
+  @include semiMobile {
+    padding: 3rem 0;
+  }
 }
 
 .numbers__block_number {
   font-size: rem(72);
   font-family: MontserratBold;
   color: #ffffff;
+  @include semiMobile {
+    font-size: rem(50);
+  }
 }
 
 .numbers__block__text {
@@ -134,4 +144,7 @@
   font-size: rem(14);
   text-transform: uppercase;
   color: #ffffff;
+  @include semiMobile {
+    font-size: rem(10);
+  }
 }

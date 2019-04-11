@@ -18,6 +18,12 @@
   margin-bottom: 7rem;
   width: 48%;
   display: flex;
+  @include laptop {
+    flex-direction: column;
+    margin-right: 1rem;
+    width: 46%;
+    align-items: center;
+  }
 }
 
 .clients__list {

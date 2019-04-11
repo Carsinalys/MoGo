@@ -39,10 +39,17 @@
 .power {
   width: 30%;
   display: flex;
+  @include semiMobile {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .power__image {
   margin-right: 2.7rem;
+  @include semiMobile {
+    margin-bottom: 3rem;
+  }
 }
 
 .work__powers__line {
@@ -93,4 +100,7 @@
 
 .work {
   animation: aboutShow 1s;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
 }

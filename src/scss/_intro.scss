@@ -80,12 +80,18 @@
   text-transform: uppercase;
   font-family: MontserratRegular;
   font-size: rem(14);
+  @include laptop {
+    font-size: rem(10);
+  }
 }
 
 .intro__collage__item__bottom {
   font-size: rem(15);
   font-family: KaushanScriptRegular;
   color: #ffffff;
+  @include laptop {
+    font-size: rem(11);
+  }
 }
 
 .intro__slider__slides {
@@ -145,6 +151,12 @@
 .intro__slide__image {
   width: 20%;
   margin-right: 3rem;
+  @include laptop {
+    width: 35%;
+  }
+  @include mobile {
+    width: 50%;
+  }
 }
 
 .intro__slide__content_about {

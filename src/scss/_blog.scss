@@ -19,14 +19,26 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 12rem;
+  @include littleDesctop {
+    padding: 0 1rem;
+  }
+  @include semiMobile {
+    flex-direction: column;
+  }
 }
 
 .blog__about__image {
   width: 47.5%;
+  @include semiMobile {
+    width: 100%;
+  }
 }
 
 .blog__about__right{
   width: 50%;
+  @include semiMobile {
+    width: 100%;
+  }
 }
 
 .blog__about__right__text{
@@ -53,6 +65,12 @@
   position: absolute;
   left: 1.5rem;
   top: 1.5rem;
+  @include laptop {
+    width: 2rem;
+    height: 2rem;
+    left: 2rem;
+    top: 2rem;
+  }
 }
 
 #arrow {
@@ -120,6 +138,12 @@
 .blog__slider {
   position: relative;
   min-height: 27rem;
+  @include laptop {
+    min-height: 20rem;
+  }
+  @include mobile {
+    min-height: 22.5rem;
+  }
 }
 
 .blog__slider__slide {
@@ -173,16 +197,30 @@
   padding: 4rem;
   border: 3px #95e1d3 solid;
   margin-right: 6rem;
+  @include laptop {
+    margin-right: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #message {
   fill: #95e1d3;
+  @include laptop {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .blog__slider__slide__text {
   color: #999999;
   font-size: rem(20);
   font-family: KaushanScriptRegular;
+  @include laptop {
+    font-size: rem(12);
+  }
 
 }
 
