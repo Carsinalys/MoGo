@@ -1,0 +1,132 @@
+.stories__animation {
+  animation: aboutShow 1s;
+}
+
+.stories__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12rem;
+}
+
+.stories__item {
+  width: 31.5%;
+}
+
+.stories__image {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+@keyframes showAnim {
+  0% {
+    transform: rotateX(90deg);
+  }
+  20% {
+    transform: rotateX(180deg);
+  }
+  40% {
+    transform: rotateX(270deg);
+  }
+  60% {
+    transform: rotateX(180deg);
+  }
+  80% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.stories__date {
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #95e1d3;
+  transition: 0.3s;
+}
+
+.stories__link {
+  &:hover {
+    .stories__date {
+     animation: showAnim 1s;
+    }
+  }
+}
+
+.stories__date__num {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: rem(30);
+  line-height: rem(30);
+}
+.stories__date__mounth {
+  color: #ffffff;
+  font-size: rem(15);
+}
+
+.stories__link {
+  display: block;
+}
+
+.stories__content__title {
+  font-size: rem(14);
+  font-family: MontserratRegular;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.stories__content__text {
+  color: #9f9f9f;
+  font-size: rem(15);
+  font-family: MontserratRegular;
+  margin-bottom: 2rem;
+}
+
+.stories__content__line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.stories__content__info{
+  display: flex;
+}
+
+.stories__content__info__wathes {
+  margin-right: 2rem;
+}
+
+#eye, #speech {
+  fill: #95e1d3;
+  transition: 0.3s;
+  margin-right: 0.5rem;
+}
+
+.stories__content__info__comments, .stories__content__info__wathes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.stories__content__info__wathes__num, .stories__content__info__comments__num {
+  color: #999999;
+}
+
+.stories__content__info__wathes, .stories__content__info__comments {
+  &:hover {
+    #eye, #speech {
+      fill: #64ffe2;
+      transform: scale(1.5);
+    }
+  }
+}

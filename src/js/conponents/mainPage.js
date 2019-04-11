@@ -1,16 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import PropTypes from "prop-types";
+
 import Mainnav from './mainnav'
 import Bottom from './mainbottom'
-import PropTypes from "prop-types";
-import { CSSTransitionGroup } from 'react-transition-group'
+
 import About from './about'
 import Content from './maincontent'
 import Work from './work'
 import Blog from './blog'
 import Contacts from './contacts'
 import Intro from './intro'
-
+import BottomWork from './bottomWork'
+import Stories from './stories'
+import Last from './last'
 
 
 class MainPage extends React.Component {
@@ -41,6 +44,9 @@ class MainPage extends React.Component {
               case 4: return <Blog/>;
               case 5: return <Contacts/>;
               case 6: return <Intro/>;
+              case 7: return <BottomWork/>;
+              case 8: return <Stories/>;
+              case 9: return <Last/>;
             }
 };
 

@@ -13,7 +13,7 @@ class Mainnav extends React.Component {
   };
   render() {
     return (
-      <div className="container container_first_theme">
+      <div className={this.getMarginMenu()}>
         <div className="logo">
           <p className={this.getClassLogo()}>MoGO</p>
         </div>
@@ -37,6 +37,8 @@ class Mainnav extends React.Component {
       </div>
     );
   }
+
+  getMarginMenu = () => this.props.pageNumber == 7 || this.props.pageNumber == 8 || this.props.pageNumber == 9 ? "container container_first_theme container_second_theme" : "container container_first_theme"
 
   getClassAbout = (num1, num2) => {
           if (this.props.pageNumber == num1) {return "nav__links__link"}

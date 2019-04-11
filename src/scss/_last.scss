@@ -1,0 +1,338 @@
+.last_animation {
+  animation: aboutShow 1s;
+}
+
+.last_bg {
+  background: url("../img/lastMap.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.last_liter {
+  background: rgba(255,255,255, 0.85);
+}
+
+.map__container {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.map__toggle__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    #mark {
+      fill: #000000;
+    }
+    .map__toggle__text {
+      color: #000000;
+    }
+    .map__toggle__line {
+      background: #000000;
+    }
+  }
+}
+
+#mark {
+  fill: #f38181;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.map__toggle__text {
+  color: #f38181;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: rem(24);
+  font-family: MontserratBold;
+  margin-bottom: 1rem;
+}
+
+.map__toggle__line {
+  width: 6rem;
+  height: 3px;
+  background: #f38181;
+  transition: 0.3s;
+}
+
+
+.map__hide {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+
+.map__show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.map__close {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f38181;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: #e01e1e;
+  }
+  &:before,&:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.5rem;
+    height: 2px;
+    background: #ffffff;
+    top: 1.4rem;
+    left: 0.8rem;
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.map__close__show {
+  display: block;
+}
+
+/////////////////////////////////////////////////////////////////
+
+.social__first__networks__link {
+  display: inline-block;
+  margin-right: 1rem;
+  &:hover {
+    svg>path {
+      fill: #1e8572;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  svg{
+    width: 2rem;
+    height: 2rem;
+  }
+  svg>path {
+    fill: #95e1d3;
+    transition: 0.3s;
+  }
+}
+
+.social{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+}
+
+.social__first {
+  width: 39%;
+}
+
+.social__second {
+  width: 28%;
+}
+
+.social__third {
+  width: 22.5%;
+}
+
+.social__first__about__title {
+  color: #cccccc;
+  font-size: rem(46);
+  margin: 0 0 4rem 0;
+}
+
+.social__first__about__text {
+  color: #b1b1b1;
+  font-size: rem(15);
+  font-family: MontserratRegular;
+  margin-bottom: 5rem;
+}
+
+.social__first__about__follow {
+  color: #333333;
+  font-size: rem(15);
+  font-family: MontserratBold;
+  margin-bottom: 2rem;
+}
+
+.social__first__about__follw__num {
+  font-size: rem(20);
+}
+
+.social__first__about__line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.social__first__networks {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.social__first__networks__text {
+  color: #9f9f9f;
+  margin-right: 1.5rem;
+}
+
+.social__first__sunscribe__mail {
+  padding: 1.5rem;
+  border: 1px #e7e7e7 solid;
+  color: #cfcfcf;
+  font-size: rem(15);
+  font-family: MontserratRegular;
+  width: 48%;
+}
+
+
+.social__first__sunscribe__submit {
+  width: 31.25%;
+  padding: 1.5rem;
+  background: #95e1d3;
+  outline: none;
+  transition: 0.3s;
+  color: #ffffff;
+  font-family: MontserratBold;
+  font-size: rem(14);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: #277d6d;
+  }
+}
+
+.social__second__title {
+  font-size: rem(14);
+  text-transform: uppercase;
+  font-family: MontserratRegular;
+  color: #333333;
+  margin-bottom: 4rem;
+}
+
+.social__second__pic {
+  transition: 0.3s;
+}
+
+.social__second__link {
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    .social__second__pic {
+      transform: scale(1.1);
+      box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.3);
+    }
+  }
+}
+
+.social__second__image {
+  width: 35%;
+
+}
+
+.social__second__about {
+  width: 59%;
+  padding-top: 2rem;
+}
+
+.social__second__about__title {
+  font-size: rem(12);
+  font-family: MontserratRegular;
+  text-transform: uppercase;
+  color: #333333;
+  line-height: 1.4;
+}
+
+.social__second__about__text{
+  color: #ababab;
+  font-size: rem(13);
+  font-family: KaushanScriptRegular;
+}
+
+.social__second__item {
+  margin-bottom: 3rem;
+}
+
+.social__third___title {
+  text-transform: uppercase;
+  color: #333333;
+  font-size: rem(14);
+  font-family: MontserratRegular;
+  margin: 0 0 4rem 0;
+}
+
+.social__third__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.social__third__item {
+  width: 32%;
+  margin: 0 0.2rem 0.2rem 0;
+  &:nth-child(3n) {
+    margin: 0 0 0.2rem 0;
+  }
+}
+
+.social__third__link {
+  display: inline-block;
+}
+
+.social__third__pic {
+  vertical-align: middle;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.social__third__link {
+  color: #585858;
+  font-size: rem(13);
+  font-family: KaushanScriptRegular;
+  transition: 0.3s;
+  &:hover {
+    color: #000000;
+  }
+}
+
+.social__line {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.social__footer {
+  text-align: center;
+  padding: 2.5rem;
+  margin-bottom: 7rem;
+}
+
+.social__footer__text {
+  font-family: MontserratRegular;
+  font-size: rem(14);
+  color: #333333;
+}
+
+.social__footer__text_red {
+  color: #f38181;
+}
